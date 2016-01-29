@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A local variable can only be accessed from within the function where it was declared.</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Outside the function I can display " + typeof carName;
+
+function myFunction() {
+    var carName = "Volvo";
+    document.getElementById("demo2").innerHTML =
+    "Inside the function I can display " + carName;
+}
+myFunction();
+/* typeof explained on Mozilla Dev:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+*/
+</script>
+
+</body>
+</html>
+

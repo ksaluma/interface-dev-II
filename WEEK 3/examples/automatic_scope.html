@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable:</p>
+
+<p id="demo"></p>
+
+<script>
+    
+function myFunction() {
+    carName = "Volvo";
+}
+    
+myFunction();
+document.getElementById("demo").innerHTML =
+"Once the variable is created inside \"myFunction\", outside the function I can still display " + carName;
+
+</script>
+<p><em>It is generally NOT a good idea to let this happen.</em></p>
+</body>
+</html>

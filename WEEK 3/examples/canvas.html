@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+</body>
+    
+<script>
+    function drawRect(){
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var width = c.width;
+        var height = c.height;
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0,0,width,height);
+    }
+    
+    function drawLine(){
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var width = c.width;
+        var height = c.height;
+        ctx.moveTo(0,0);
+        ctx.lineTo(width,height);
+        ctx.stroke();
+    }
+    
+    function drawCircle(){
+        /*The arc() method creates an arc/curve (used to create circles, or parts of circles).
+        To create a circle with arc(): Set start angle to 0 and end angle to 2*Math.PI.
+        Use the stroke() or the fill() method to actually draw the arc on the canvas. */
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,1.5*Math.PI);
+        
+        /*
+        Center arc(95,50,...)
+        Radius arc(95,50,40,...)
+        Start angle arc(95,50,40,0,...)
+        End angle arc(95,50,40,0,2*Math.PI) */
+        
+        ctx.stroke();
+    }
+    
+    function drawCircle2(){
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+    }
+    
+    function drawText(){
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        
+        //ctx.fillText(string,startX,baseline);
+        ctx.fillText("Hello World",10,50);
+    }
+
+// drawCircle2();
+drawText();
+
+</script>
+</html>
