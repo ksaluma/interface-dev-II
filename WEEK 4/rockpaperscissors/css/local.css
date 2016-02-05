@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* CSS Document */
+* {font-family: 'Josefin Slab', serif;}
+
+p{font-size:18px;}
+a{color: #666;}
+a:hover, a.active{color:#F4980B;}
+h1>span:before{font-size:8vw; color:#F4980B;}
+
+#choices>a{display:block; float:left; margin-right:10px;}
+#choices>a:after{content:" |";}
+#choices>a:last-child:after{content:"";}
+#choices>a>span{font-size:48px;}
+
+.played{background:#9F9999; border-radius:5px; border:1px solid #333; text-align:center;}
+.played span{font-size:18vw;}
+
+#computer_choice{display:none; position:relative;}
+#computer_choice.played{display:block;}
+
+#div1{position:relative;}
+#score_board{position:absolute;right:0; width:25%; visibility:hidden;}
+#score_board.play{visibility:visible;}
+#score_board>div{width:auto; float:right; border-radius:5px; border:1px solid #666; padding:1%; text-align:center;}
+#score_board>div h2{font-size:1.2vw;}
+#score_board>div:first-of-type{margin-left:20px;}
+
+
+

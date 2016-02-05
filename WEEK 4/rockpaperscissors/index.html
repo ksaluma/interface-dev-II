@@ -1,0 +1,58 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rock Paper Scissors</title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/fluid.css" rel="stylesheet" type="text/css">
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/local.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700,100' rel='stylesheet' type='text/css'>
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/respond.min.js"></script>
+</head>
+<body>
+<div class="gridContainer clearfix">
+  <div id="div1" class="fluid">
+  		<div id="score_board">
+  		<div><h2>Player</h2><p id="player_score">0</p></div>
+        <div><h2>Computer</h2><p id="computer_score">0</p></div>
+        <br clear="all">
+        </div>
+    <div class="clearfix" id="game_board">
+    <h1 class="intro" id="intro"><span class="icon-fist">&nbsp;</span>Rock Paper Scissors</h1>
+    <p>Rock breaks scissors. Paper covers Rock. Scissors cut paper.</p>
+        <div id="choices">
+            <a name="rock" class="player_choice" id="rock"><span class="icon-rock"></span>Rock</a>
+            <a name="paper" class="player_choice" id="paper"><span class="icon-paper"></span>Paper</a>
+            <a name="scissors" class="player_choice" id="scissors"><span class="icon-scissors"></span>Scissors</a>
+        </div>
+        
+    </div>
+    <br clear="all">
+    <div id="computer_choice">
+    	
+    </div>
+  </div>
+</div>
+<script src="js/rockpaperscissors.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Say My Name</title>
+</head>
+
+<body>
+<p id="demo">Display the result here.</p>
+
+<script>
+var myName=prompt('What is your name');
+function greetings(name) {
+    return "Hello " + name;
+}
+
+document.getElementById('demo').innerHTML=greetings(myName);
+
+</script>
+
+</body>
+</html>
