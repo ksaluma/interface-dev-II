@@ -20,6 +20,23 @@ ops['-']='subtract';
 ops['*']='mulitply';
 ops['/']='divide';
 
+for(i=9; i>-1; i--){
+	var node = document.createElement('div'); //create div
+	var textnode = document.createTextNode(i); // i is what is being fed... i is in the TextNode
+	node.appendChild(textnode); //append children to document as text
+	document.getElementById('numbers').appendChild(node); //finding direct children of 'numbers'
+}
+
+
+//creating buttons
+for (var key in ops){
+	var node = document.createElement('div');
+	var textnode = document.createTextNode(key);
+	node.className='operator '+ops[key];
+	node.appendChild(textnode);
+	document.getElementById('operands').appendChild(node); //send to operands id
+}
+
 </script>
 </body>
 </html>

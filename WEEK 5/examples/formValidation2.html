@@ -11,20 +11,50 @@
 <body>
 <form method="get" id="myForm">
 <p>ALL fields are required<sup>*</sup></p>
+
 <div>
 <label for"name">Name</label>
 <input type="text" name="name" id="name" class="required" placeholder="Name" value="">
+</div>
+
 <div>
 <label for"email">Email</label>
 <input type="email" name="email" id="email" class="required" placeholder="Email" value="">
 </div>
+
 <div>
 <input type="submit" role="button" onClick="event.preventDefault(); validate();">
 <input type="reset" role="button" onClick="clearForm();">
 </div>
+
 </form>
 
 <script>
+
+function validate(){
+	var required = document.getElementsByClassName('required');
+	var test = true;
+	for (x in required) {
+		if(required.item(x).value===''){
+			required.item(x).classList.add('error');
+			test='false';
+		}
+	}
+	if(test===true){
+		document.getElementById('myForm').submit();
+	}
+}
+
+function clearForm() {
+
+	var errors = document.getElementsByClassName('required');
+	for (x in errors) {
+		if (errors.item(x).classList.contains('error')){
+			errors.item(x).classList.remove('error');
+		}
+	}
+
+}
 
 </script>
 </body>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Sibling Rivalry</title>
 <style>
-/*#Mary{background:rgba(77,77,77,0.72); border:1px solid #000; border-radius:3px; font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif; padding:20px; box-sizing:border-box; text-shadow:1px 1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff, -1px -1px 0px #fff}*/
+		#Mary{background:rgba(77,77,77,0.72); border:1px solid #000; border-radius:3px; font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif; padding:20px; box-sizing:border-box; text-shadow:1px 1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff, -1px -1px 0px #fff}
 </style>
 </head>
 
@@ -20,6 +20,19 @@
 </div>
 <div id="children"></div>
 <script>
+
+var x = document.getElementById('Mary').childElementCount;
+var container = document.getElementById('children');
+var names = document.getElementById('Mary').childNodes;
+
+container.innerHTML='Mary contains' +x+ 'Child Elements';
+container.innerHTML+= '<p> But Mary Contains These Nodes:';
+for (y in names){
+	container.innerHTML+=names.item(y).nodeName;
+	container.innerHTML+='<br>'
+}
+
+container.innerHTML+='<p>'
 
 </script>
 </body>
