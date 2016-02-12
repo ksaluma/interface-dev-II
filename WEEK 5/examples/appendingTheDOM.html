@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Appending the Dom</title>
+<style>
+#numbers, #operands{box-sizing:border-box; width:9em; float:left;}
+#numbers>div, #operands>div{width:3em; text-align:center; height:3em; border:1px solid #ccc; float:left; border-radius:3px; box-sizing:border-box; padding:1em;}
+#operands{width:3em;}
+</style>
+</head>
+
+<body>
+<div id="numbers"></div>
+<div id="operands"></div>
+<script>
+var ops = Array();
+ops['+']='add';
+ops['-']='subtract';
+ops['*']='mulitply';
+ops['/']='divide';
+
+</script>
+</body>
+</html>

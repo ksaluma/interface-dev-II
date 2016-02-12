@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Validation 2</title>
+<style>
+.error{background:#F4060A; border:1px solid #333;}
+</style>
+</head>
+
+<body>
+<form method="get" id="myForm">
+<p>ALL fields are required<sup>*</sup></p>
+<div>
+<label for"name">Name</label>
+<input type="text" name="name" id="name" class="required" placeholder="Name" value="">
+<div>
+<label for"email">Email</label>
+<input type="email" name="email" id="email" class="required" placeholder="Email" value="">
+</div>
+<div>
+<input type="submit" role="button" onClick="event.preventDefault(); validate();">
+<input type="reset" role="button" onClick="clearForm();">
+</div>
+</form>
+
+<script>
+
+</script>
+</body>
+</html>
