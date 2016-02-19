@@ -84,7 +84,6 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="js/make_it_rain.js"></script>
-    <script src="js/make_it_rain.js"></script>
     <script>
     var ops = Array();
     ops['+']='add';
@@ -110,8 +109,11 @@
     var textnode = document.createTextNode("."); // Create a text node
     node.appendChild(textnode); // Append the text to <div>
     document.getElementById("numbers").appendChild(node); 
+
     var n1=document.getElementById('result').innerHTML;   
+
     var n2="";
+    
     var numKeys = document.querySelectorAll('#numbers div');
     for(x in numKeys){
         numKeys[x].onclick=function(){

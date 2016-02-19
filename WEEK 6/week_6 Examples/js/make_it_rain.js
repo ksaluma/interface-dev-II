@@ -18,19 +18,23 @@ function makeItRain(n1, n2, con){
 var result;
     switch(con){
     case 'add':
-        
+        result=add(n1,n2)
+        break;
         
     case 'subtract':
-        
+        result=subtract(n1,n2)
+        break;
         
     case 'multiply':
-        
+        result=multiply(n1,n2)
+        break;
             
     case 'divide':
-        
+        result=divide(n1,n2)
+        break;
             
     default: 
-        result = "Welcome to Week 6";
+        result = "0";
     
     }
     return result;
@@ -38,13 +42,37 @@ var result;
 
 
 function contater(n){
-    var num
+    var num;
     //test n by parsing the integer
-    if (){
+    if (parseInt(n)!==NaN){
     //if it is a number, convert it to a string
-   
-    }else{
-        
+        num=n.toString();
     }
+
+    else{
+        num=n;
+    }
+
+    return num;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

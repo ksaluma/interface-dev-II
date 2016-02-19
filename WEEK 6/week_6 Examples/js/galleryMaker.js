@@ -21,11 +21,11 @@ function myFunction(xml) {
     
     
     str +='<img src="' +
-    x[i] +
+    x[i].getElementsByTagName('SRC')[0].childNodes[0].nodeValue+
     '" alt="' +
-    x[i] +
+    x[i].getElementsByTagName('SRC')[0].childNodes[0].nodeValue +
     '" title="' +
-    x[i] +
+    x[i].getElementsByTagName('SRC')[0].childNodes[0].nodeValue +
     '"></div>';
     }
     carousel.innerHTML=str;
