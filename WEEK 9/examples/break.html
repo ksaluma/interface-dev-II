@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div id="demo"></div>
+<script>
+var a = Array('Mary', 'Jane', 'Margaret', 'Jo');
+var demo = document.getElementById('demo');
+demo.innerHTML='';
+for (i = 0; i < a.length; i++) {
+	demo.innerHTML += a[i]+'<br>';
+  	if (a[i] === 'Jane') {
+    	break;
+  	}
+}
+</script>
+</body>
+</html>

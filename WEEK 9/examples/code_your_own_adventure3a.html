@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+<div id="demo"></div>
+<body>
+<script>
+var user=prompt("Do you know Krav Maga?").toUpperCase();
+var attacker = prompt("Have you ever faced a ninja?").toUpperCase();
+var lastBattle = prompt("Would you win?").toUpperCase();
+
+var demo = document.getElementById('demo');
+
+switch(user){
+
+	case 'YES': 
+	if(attacker==='YES' && lastBattle==='YES') {
+		demo.innerHTML='YOU are most deadly';
+	}
+	else {
+		demo.innerHTML='Prepare to test yourself in Battle';
+	}
+	break;
+
+	case 'NO':
+	if(attacker==='YES' || lastBattle==='YES') {
+		demo.innerHTML='YOU need some milk!';
+	}
+	else {
+		demo.innerHTML='hide yourself';
+	}
+	break;
+
+	case 'MAYBE':
+		demo.innerHTML='you sure??!';
+	
+	default:
+		demo.innerHTML='prepare to die';
+	
+    
+}
+
+</script>
+</body>
+</html>

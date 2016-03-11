@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<div id="dragonSlayer"></div>
+
+<script>
+
+var totalDamage = 0;
+
+	var slayer= function(){
+	// var slaying = true;
+	var youHit = Math.floor(Math.random()*2);
+	var damageThisRound = Math.floor(Math.random()*5 + 1);
+	var dragonSlayer = document.getElementById('dragonSlayer');
+
+//math.floor takes lowest value
+
+	if(youHit===1) {
+		totalDamage += damageThisRound; //adds to damage count
+		if(totalDamage>4) {
+			dragonSlayer.innerHTML='The Dragon is dead :(';
+		}
+		else{
+			slayer();
+		}
+	}
+	else {
+		switch(damageThisRound) {
+			case (damageThisRound<2):
+				dragonSlayer.innerHTML='You Live! woooooooo';
+				break; //stop executing case
+
+			case (damageThisRound<4):
+				dragonSlayer.innerHTML='You are almost dead! Do you have insurance?';
+				break;
+
+			default:
+				dragonSlayer.innerHTML='You are Dead! boooooooo';
+		}
+	}
+}
+
+slayer();
+
+</script>
+</body>
+</html>
