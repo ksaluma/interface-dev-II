@@ -1,0 +1,13 @@
+<script>
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "http://jscode.rocks/examples/week_6/cd_catalogue.xml", true);
+
+xhr.setRequestHeader('Content-Type', 'text/xml');
+xhr.send();
+
+    console.log(xhr.status);
+console.log(xhr.statusText);
+
+//xmlDocument = xhr.responseXML;
+//console.log(xmlDocument.childNodes['0'].textContent);
+</script>

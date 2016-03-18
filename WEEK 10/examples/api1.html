@@ -1,0 +1,32 @@
+<script>
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://codecademy.com", false);
+xhr.send();
+
+console.log(xhr.status);
+console.log(xhr.statusText);
+
+
+// {
+//   "myBlog": {
+//     "pageViews": "4720",
+//     "subscribers": "1711",
+//     "numberOfPosts": "37",
+//     "mostRecentPost": "2013-01-04",
+//   }
+// }
+    
+//POST /codecademy/learn-http HTTP/1.1
+//Host: www.codecademy.com
+//Content-Type: text/html; charset=UTF-8
+
+//Name=Eric&Age=26
+
+// HTTP/1.1 200 OK
+// Content-Type: text/xml; charset=UTF-8
+
+// <?xml version="1.0" encoding="utf-8"?>
+// <string xmlns="http://www.codecademy.com/">Accepted</string>
+    
+</script>
