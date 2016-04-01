@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+body{text-align:center;}
+
+.container{
+	width:60%; 
+	margin:auto;
+}
+
+/*responsive video based on the work of Thierry Koblentz and Chris Coyier
+https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+
+#video_wrapper {
+text-align:left;
+position: relative;
+padding-bottom: 56.25%; /* 16:9 */
+height: 0;
+}
+
+#video_wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+#controls_placeholder{
+	position:absolute; 
+	left:0; 
+	bottom:0; 
+	background:rgba(255,255,255,0.8); 
+	width:100%; 
+	color:#ED1F23
+}
+
+select {
+    padding:3px;
+    margin: 0;
+    border-radius:4px;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+
