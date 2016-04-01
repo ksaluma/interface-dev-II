@@ -120,9 +120,15 @@ function updateTimerDisplay(){
 $('#volume-input').on('change', function() {
     player.setVolume($(this).val());
 });
+
+//speed
+
 $('#speed').on('change', function() {
     player.setPlaybackRate($(this).val());
 });
+
+//quality
+
 $('#quality').on('change', function() {
     player.setPlaybackQuality($(this).val());
 });
@@ -136,6 +142,12 @@ function formatTime(time){
         seconds = time - minutes * 60;
 
     seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    //if(seconds<10){
+    //     seconds= '0' + seconds;
+    // }else {
+    //     seconds=seconds;
+    // }
 
     return minutes + ":" + seconds;
 }
